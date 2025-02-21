@@ -92,7 +92,7 @@ $ButtonConnect.Add_Click({
         $ButtonConnect.Enabled = $false
 
         # Get the list of datastores
-        $datastores = Get-Datastore | Sort-Object Name | Where-Object { $_.Type -eq "VMFS" -or $_.Type -eq "NFS" } | Select-Object -ExpandProperty Name
+        $datastores = Get-Datastore | Sort-Object Name | Where-Object { $_.Type -eq "VMFS" -or $_.Type -eq "NFS41" -or $_.Type -eq "NFS" } | Select-Object -ExpandProperty Name
 
 
         # Populate the combobox with the datastores
